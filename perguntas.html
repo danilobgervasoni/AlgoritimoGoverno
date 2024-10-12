@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Você está feliz?</title>
+  <style>
+    /* Estilos CSS aqui */
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    .container {
+      text-align: center;
+      background-color: #ffffff;
+      padding: 100px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .progress-bar {
+      width: 100%;
+      height: 20px;
+      background-color: #ccc;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      background-color: #51b654;
+      width: 0%;
+    }
+    input {
+      margin-top: 15px;
+      margin-bottom: 20px;
+      width: 100px;
+      height: 20px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      background-color: #484bff;
+      color: white;
+      border: none;
+    }
+    p {
+      margin: 0;
+      font-size: 20px;
+      color: #333;
+    }
+    h1 {
+      font-size: 32px;
+      margin-bottom: 50px;
+    }
+    .error-message {
+      color: red;
+      font-size: 14px;
+      display: none;
+    }
+    .success-message {
+      color: rgb(22, 150, 22);
+      font-size: 16px;
+      display: none;
+      margin-bottom: 50px;
+      margin-top: -20px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Algorítmo de Governo</h1>
+    <div id="pergunta1">
+      <p>De 0 a 100, como está sua espiritualidade?</p>
+      <input type="number" id="nota1" min="0" max="100" placeholder="de 0 a 100%" oninput="atualizarBarra(1)">
+      <br>
+      <button id="gravar-btn1" onclick="gravarNota(1)">Gravar</button>
+      <p class="success-message" id="success-message1">Gravado com sucesso!</p>
+      <div class="progress-bar">
+        <div class="progress-bar-fill" id="barra1"></div>
+      </div>
+      <p class="error-message" id="error-message1">Insira um número entre 0 e 100.</p>
+      <button id="proximo-btn1" class="hidden" onclick="proximo(1)">Próximo</button>
+    </div>
+
+    <!-- Pergunta 2 -->
+    <div id="pergunta2" class="hidden">
+      <p>Você se sente feliz?</p>
+      <input type="number" id="nota2" min="0" max="100" placeholder="de 0 a 100%" oninput="atualizarBarra(2)">
+      <br>
+      <button id="gravar-btn2" onclick="gravarNota(2)">Gravar</button>
+      <p class="success-message" id="success-message2">Gravado com sucesso!</p>
+      <div class="progress-bar">
+        <div class="progress-bar-fill" id="barra2"></div>
+      </div>
+      <p class="error-message" id="error-message2">Insira um número entre 0 e 100.</p>
+      <button id="proximo-btn2" class="hidden" onclick="proximo(2)">Próximo</button>
+      <button id="voltar-btn2" onclick="voltar(2)">Voltar</button>
+    </div>
+
+    <!-- Adicione as perguntas 3 a 7 aqui seguindo o mesmo padrão -->
+    
+    <div id="pergunta3" class="hidden">
+      <p>Você se sente realizado?</p>
+      <input type="number" id="nota3" min="0" max="100" placeholder="de 0 a 100%" oninput="atualizarBarra(3)">
+      <br>
+      <button id="gravar-btn3" onclick="gravarNota(3)">Gravar</button>
+      <p class="success-message" id="success-message3">Gravado com sucesso!</p>
+      <div class="progress-bar">
+        <div class="progress-bar-fill" id="barra3"></div>
+      </div>
+      <p class="error-message" id="error-message3">Insira um número entre 0 e 100.</p>
+      <button id="proximo-btn3" class="hidden" onclick="proximo(3)">Próximo</button>
+      <button id="voltar-btn3" onclick="voltar(3)">Voltar</button>
+    </div>
+
+    <div id="pergunta4" class="hidden">
+      <p>Você tem apoio emocional?</p>
+      <input type="number" id="nota4" min="0" max="100" placeholder="de 0 a 100%" oninput="atualizarBarra(4)">
+      <br>
+      <button id="gravar-btn4" onclick="gravarNota(4)">Gravar</button>
+      <p class="success-message" id="success-message4">Gravado com sucesso!</p>
+      <div class="progress-bar">
+        <div class="progress-bar-fill" id="barra4"></div>
+      </div>
+      <p class="error-message" id="error-message4">Insira um número entre 0 e 100.</p>
+      <button id="proximo-btn4" class="hidden" onclick="proximo(4)">Próximo</button>
+      <button id="voltar-btn4" onclick="voltar(4)">Voltar</button>
+    </div>
+
+    <div id="pergunta5" class="hidden">
+      <p>Você tem metas claras?</p>
+      <input type="number" id="nota5" min="0" max="100" placeholder="de 0 a 100%" oninput="atualizarBarra(5)">
+      <br>
+      <button id="gravar-btn5" onclick="gravarNota(5)">Gravar</button>
+      <p class="success-message" id="success-message5">Gravado com sucesso!</p>
+      <div class="progress-bar">
+        <div class="progress-bar-fill" id="barra5"></div>
+      </div>
+      <p class="error-message" id="error-message5">Insira um número entre 0 e 100.</p>
+      <button id="proximo-btn5" class="hidden" onclick="proximo(5)">Próximo</button>
+      <button id="voltar-btn5" onclick="voltar(5)">Voltar</button>
+    </div>
+
+    <div id="pergunta6" class="hidden">
+      <p>Você se sente motivado?</p>
+      <input type="number" id="nota6" min="0" max="100" placeholder="de 0 a 100%" oninput="atualizarBarra(6)">
+      <br>
+      <button id="gravar-btn6" onclick="gravarNota(6)">Gravar</button>
+      <p class="success-message" id="success-message6">Gravado com sucesso!</p>
+      <div class="progress-bar">
+        <div class="progress-bar-fill" id="barra6"></div>
+      </div>
+      <p class="error-message" id="error-message6">Insira um número entre 0 e 100.</p>
+      <button id="proximo-btn6" class="hidden" onclick="proximo(6)">Próximo</button>
+      <button id="voltar-btn6" onclick="voltar(6)">Voltar</button>
+    </div>
+
+    <div id="pergunta7" class="hidden">
+      <p>Você se sente realizado?</p>
+      <input type="number" id="nota7" min="0" max="100" placeholder="de 0 a 100%" oninput="atualizarBarra(7)">
+      <br>
+      <button id="gravar-btn7" onclick="gravarNota(7)">Gravar</button>
+      <p class="success-message" id="success-message7">Gravado com sucesso!</p>
+      <div class="progress-bar">
+        <div class="progress-bar-fill" id="barra7"></div>
+      </div>
+      <p class="error-message" id="error-message7">Insira um número entre 0 e 100.</p>
+      <button id="voltar-btn7" onclick="voltar(7)">Voltar</button>
+    </div>
+  </div>
+
+  <script>
+    function atualizarBarra(pergunta) {
+      let nota = document.getElementById('nota' + pergunta).value;
+      let barra = document.getElementById('barra' + pergunta);
+      
+      // Converte o valor para um número inteiro
+      let valorNumerico = parseInt(nota, 10);
+      
+      // Verifica se o valor está entre 0 e 100
+      if (!isNaN(valorNumerico) && valorNumerico >= 0 && valorNumerico <= 100) {
+        barra.style.width = valorNumerico + '%'; // Ajusta a barra de progresso
+      } else {
+        barra.style.width = '0%'; // Reseta a barra se o valor for inválido
+      }
+    }
+
+    function gravarNota(pergunta) {
+      let nota = document.getElementById('nota' + pergunta).value;
+      let barra = document.getElementById('barra' + pergunta);
+      let errorMessage = document.getElementById('error-message' + pergunta);
+      let successMessage = document.getElementById('success-message' + pergunta);
+      let gravarBtn = document.getElementById('gravar-btn' + pergunta);
+      let inputField = document.getElementById('nota' + pergunta);
+      let proximoBtn = document.getElementById('proximo-btn' + pergunta);
+
+      // Converte o valor para um número inteiro
+      let valorNumerico = parseInt(nota, 10);
+
+      if (isNaN(valorNumerico) || valorNumerico < 0 || valorNumerico > 100) {
+        errorMessage.style.display = 'block'; // Exibe a mensagem de erro
+        successMessage.style.display = 'none'; // Esconde a mensagem de sucesso
+        barra.style.width = '0%'; // Reseta a barra de progresso
+      } else {
+        errorMessage.style.display = 'none'; // Esconde a mensagem de erro
+        barra.style.width = valorNumerico + '%'; // Ajusta a barra de progresso
+
+        // Oculta o campo de input e o botão de gravação
+        inputField.style.visibility = 'hidden'; // O input não será mais exibido
+        gravarBtn.classList.add('hidden'); // Mantém o botão oculto
+
+        // Exibe a mensagem de sucesso
+        successMessage.style.display = 'block';
+        proximoBtn.classList.remove('hidden'); // Mostra o botão "Próximo"
+      }
+    }
+
+    function proximo(pergunta) {
+      if (pergunta < 7) {
+        document.getElementById('pergunta' + pergunta).classList.add('hidden'); // Oculta a pergunta atual
+        document.getElementById('pergunta' + (pergunta + 1)).classList.remove('hidden'); // Exibe a próxima pergunta
+      }
+    }
+
+    function voltar(pergunta) {
+      if (pergunta > 1) {
+        document.getElementById('pergunta' + pergunta).classList.add('hidden'); // Oculta a pergunta atual
+        document.getElementById('pergunta' + (pergunta - 1)).classList.remove('hidden'); // Exibe a pergunta anterior
+      }
+    }
+  </script>
+</body>
+</html>
