@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Você está feliz?</title>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Algorítmo de Governo</h1>
+    <div id="pergunta1">
+      <p>Como você tem governado sua vida quanto ao Dinheiro?</p>
+      <input type="number" id="nota1" min="0" max="100" placeholder="de 0 a 100%" oninput="atualizarBarra(1)">
+      <br>
+      <button id="gravar-btn1" onclick="gravarNota(1)">Gravar</button>
+      <p class="success-message" id="success-message1">Gravado com sucesso!</p>
+      <div class="progress-bar">
+        <div class="progress-bar-fill" id="barra1"></div>
+      </div>
+
+      <div class="navigation-links">
+      <p class="error-message" id="error-message1">Insira um número entre 0 e 100.</p>
+      <a href="#" id="editar-link1" class="hidden" onclick="editarNota(1)">Editar</a>
+      <a id="proximo-link1" class="hidden" href="javascript:void(0)" onclick="proximo(1)">Próximo</a>
+      </div>
+    </div>
+
+    <!-- Pergunta 2 -->
+    <div id="pergunta2" class="hidden">
+      <p>O quanto você tem governado sua vida quanto a Espiritualidade?</p>
+      <input type="number" id="nota2" min="0" max="100" placeholder="de 0 a 100%" oninput="atualizarBarra(2)">
+      <br>
+      <button id="gravar-btn2" onclick="gravarNota(2)">Gravar</button>
+      <p class="success-message" id="success-message2">Gravado com sucesso!</p>
+      <div class="progress-bar">
+        <div class="progress-bar-fill" id="barra2"></div>
+      </div>
+
+      <div class="navigation-links">
+      <p class="error-message" id="error-message2">Insira um número entre 0 e 100.</p>
+      <a id="voltar-link2" href="javascript:void(0)" onclick="voltar(2)">Voltar</a>
+      <a href="#" id="editar-link2" class="hidden" onclick="editarNota(2)">Editar</a>
+      <a id="proximo-link2" class="hidden" href="javascript:void(0)" onclick="proximo(2)">Próximo</a>
+      </div>
+    </div>
+
+    <!-- Adicione as perguntas 3 a 7 aqui seguindo o mesmo padrão -->
+    
+    <div id="pergunta3" class="hidden">
+      <p>O quanto você tem governado sua vida quanto ao Tempo?</p>
+      <input type="number" id="nota3" min="0" max="100" placeholder="de 0 a 100%" oninput="atualizarBarra(3)">
+      <br>
+      <button id="gravar-btn3" onclick="gravarNota(3)">Gravar</button>
+      <p class="success-message" id="success-message3">Gravado com sucesso!</p>
+      <div class="progress-bar">
+        <div class="progress-bar-fill" id="barra3"></div>
+      </div>
+      <div class="navigation-links">
+        <p class="error-message" id="error-message3">Insira um número entre 0 e 100.</p>
+        <a id="voltar-link3" href="javascript:void(0)" onclick="voltar(3)">Voltar</a>
+        <a href="#" id="editar-link3" class="hidden" onclick="editarNota(3)">Editar</a>
+        <a id="proximo-link3" class="hidden" href="javascript:void(0)" onclick="proximo(3)">Próximo</a>
+      </div>
+    </div>
+
+     <!-- Pergunta 4 -->
+  <div id="pergunta4" class="hidden">
+    <p>O quanto você tem governado sua vida quanto ao Relacionamento?</p>
+    <input type="number" id="nota4" min="0" max="100" placeholder="de 0 a 100%" oninput="atualizarBarra(4)">
+    <br>
+    <button id="gravar-btn4" onclick="gravarNota(4)">Gravar</button>
+    <p class="success-message" id="success-message4">Gravado com sucesso!</p>
+    <div class="progress-bar">
+      <div class="progress-bar-fill" id="barra4"></div>
+    </div>
+    <div class="navigation-links">
+      <p class="error-message" id="error-message4">Insira um número entre 0 e 100.</p>
+      <a id="voltar-link4" href="javascript:void(0)" onclick="voltar(4)">Voltar</a>
+      <a href="#" id="editar-link4" class="hidden" onclick="editarNota(4)">Editar</a>
+      <a id="proximo-link4" class="hidden" href="javascript:void(0)" onclick="proximo(4)">Próximo</a>
+    </div>
+  </div>
+
+  <!-- Pergunta 5 -->
+  <div id="pergunta5" class="hidden">
+    <p>O quanto você tem governado sua vida quanto ao Conhecimento?</p>
+    <input type="number" id="nota5" min="0" max="100" placeholder="de 0 a 100%" oninput="atualizarBarra(5)">
+    <br>
+    <button id="gravar-btn5" onclick="gravarNota(5)">Gravar</button>
+    <p class="success-message" id="success-message5">Gravado com sucesso!</p>
+    <div class="progress-bar">
+      <div class="progress-bar-fill" id="barra5"></div>
+    </div>
+    <div class="navigation-links">
+      <p class="error-message" id="error-message5">Insira um número entre 0 e 100.</p>
+      <a id="voltar-link5" href="javascript:void(0)" onclick="voltar(5)">Voltar</a>
+      <a href="#" id="editar-link5" class="hidden" onclick="editarNota(5)">Editar</a>
+      <a id="proximo-link5" class="hidden" href="javascript:void(0)" onclick="proximo(5)">Próximo</a>
+    </div>
+  </div>
+
+  <!-- Pergunta 6 -->
+  <div id="pergunta6" class="hidden">
+    <p>O quanto você tem governado sua vida quanto a Saúde?</p>
+    <input type="number" id="nota6" min="0" max="100" placeholder="de 0 a 100%" oninput="atualizarBarra(6)">
+    <br>
+    <button id="gravar-btn6" onclick="gravarNota(6)">Gravar</button>
+    <p class="success-message" id="success-message6">Gravado com sucesso!</p>
+    <div class="progress-bar">
+      <div class="progress-bar-fill" id="barra6"></div>
+    </div>
+    <div class="navigation-links">
+      <p class="error-message" id="error-message6">Insira um número entre 0 e 100.</p>
+      <a id="voltar-link6" href="javascript:void(0)" onclick="voltar(6)">Voltar</a>
+      <a href="#" id="editar-link6" class="hidden" onclick="editarNota(6)">Editar</a>
+      <a id="proximo-link6" class="hidden" href="javascript:void(0)" onclick="proximo(6)">Próximo</a>
+    </div>
+  </div>
+
+    <div id="pergunta7" class="hidden">
+      <p>O quanto você tem governado sua vida quanto ao Social?</p>
+      <input type="number" id="nota7" min="0" max="100" placeholder="de 0 a 100%" oninput="atualizarBarra(7)">
+      <br>
+      <button id="gravar-btn7" onclick="gravarNota(7)">Gravar</button>
+      <p class="success-message" id="success-message7">Gravado com sucesso!</p>
+      <div class="progress-bar">
+        <div class="progress-bar-fill" id="barra7"></div>
+      </div>
+
+      <div class="navigation-links">
+        <p class="error-message" id="error-message7">Insira um número entre 0 e 100.</p>
+        <a id="voltar-link7" href="javascript:void(0)" onclick="voltar(7)">Voltar</a>
+        <a href="#" id="editar-link7" class="hidden" onclick="editarNota(7)">Editar</a>
+        <button id="finalizar-btn" class="disabled" onclick="finalizar()" disabled>Finalizar</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+/* Estilos CSS aqui */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  .container {
+    width: 700px;
+    height: auto;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 100px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  .navigation-links {
+    display: flex;
+    justify-content: space-between; /* Distribui os links entre os extremos */
+    align-items: center;
+    margin-top: 10px; /* Adiciona espaço acima dos links */
+  }
+  .navigation-links a {
+    flex: 1;
+    text-align: center;
+  }
+ 
+  #pergunta1 .navigation-links,
+  #pergunta7 .navigation-links {
+    justify-content: space-between; /* Centraliza os links nas perguntas sem 'Voltar' ou 'Próximo' */
+  }
+  #pergunta1 .navigation-links a,
+  #pergunta7 .navigation-links a {
+  flex: unset; /* Permite o link "Editar" ocupar o centro da barra */
+}
+
+  #pergunta2 .navigation-links,
+  #pergunta3 .navigation-links,
+  #pergunta4 .navigation-links,
+  #pergunta5 .navigation-links,
+  #pergunta6 .navigation-links {
+  justify-content: space-between; /* Distribui os links nas extremidades para as perguntas 2 a 6 */
+}
+  .progress-bar {
+    position: relative;
+    height: 20px;
+    background-color: #ccc;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    justify-content: center;
+  }
+  .progress-bar-fill {
+    width: 0%;
+    height: 100%;
+    background-color: #51b654;
+    transition: width 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Deixe o texto visível */
+    
+  }
+  input {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  a {
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #484bff;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  p {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+  }
+  h1 {
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+  .error-message {
+    color: red;
+    font-size: 14px;
+    display: none;
+  }
+  .success-message {
+    color: rgb(22, 150, 22);
+    font-size: 16px;
+    display: none;
+    margin-bottom: 30px;
+    margin-top: -20px;
+  }
+  .hidden {
+    display: none;
+  }
+  
+  #finalizar-btn.disabled {
+    background-color: grey;
+    color: white;
+    cursor: not-allowed;
+    border: none;
+    opacity: 0.6;
+  }
+  
+  /* Botão Finalizar ativado */
+  #finalizar-btn {
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    border: none;
+    opacity: 1;
+  }
