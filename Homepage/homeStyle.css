@@ -1,0 +1,76 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.header-link {
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 0.5em; /* Tamanho do texto reduzido */
+    transition: text-shadow 0.1s ease; /* Efeito de transição suave para a cor */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header-link:hover {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Efeito de sombra no texto */
+}
+
+header {
+    background-color: #4CAF50; /* Cor do header */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+header nav a:hover {
+    background-color: #45a049; /* Cor do botão ao passar o mouse */
+}
+
+main {
+    display: flex;
+    justify-content: center; /* Centraliza o container na tela */
+    align-items: center;
+    height: calc(100vh - 160px); /* Ajusta a altura, considerando o header e o footer */
+}
+
+.container {
+    background-color: #f8f8f8; /* Fundo cinza claro */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    width: 90%; /* Largura do container */
+    max-width: 600px; /* Largura máxima */
+}
+
+main h2 {
+    color: #4CAF50;
+    font-size: 2em;
+    text-align: center; /* Centraliza o título */
+}
+
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 5px 0;
+}

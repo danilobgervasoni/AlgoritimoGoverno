@@ -87,6 +87,7 @@ function voltar(pergunta) {
 function finalizar() {
   alert("Questionário finalizado! Obrigado por responder.");
   // Aqui você pode redirecionar ou executar outras ações após a finalização
+  window.location.href = '../Homepage/home.html'; 
 }
 
 
