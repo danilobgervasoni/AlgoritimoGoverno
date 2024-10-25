@@ -1,3 +1,4 @@
+/* homeStyle.css */
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
@@ -18,12 +19,14 @@ body {
 }
 
 header {
-    background-color: #4CAF50; /* Cor do header */
+    background-color: #4CAF50; /* Mesma cor do header da home */
     color: white;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 header h1 {
@@ -45,7 +48,7 @@ main {
     justify-content: center; /* Centraliza o container na tela */
     align-items: center;
     height: calc(100vh - 160px); /* Ajusta a altura, considerando o header e o footer */
-}
+}   
 
 .container {
     background-color: #f8f8f8; /* Fundo cinza claro */
@@ -69,8 +72,10 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 footer p {
-    margin: 5px 0;
+    margin: 10px 0;
 }

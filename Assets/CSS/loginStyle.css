@@ -1,0 +1,131 @@
+/* loginStyle.css */
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.header-link {
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 0.5em; /* Tamanho do texto reduzido */
+    transition: text-shadow 0.1s ease; /* Efeito de transição suave para a cor */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header-link:hover {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Efeito de sombra no texto */
+}
+
+header {
+    background-color: #4CAF50; /* Mesma cor do header da home */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+header nav a:hover {
+    background-color: #45a049; /* Cor do botão ao passar o mouse */
+}
+
+.login-container {
+    background-color: #ffffff; /* Fundo do container */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    margin: 20px auto; /* Centraliza o container */
+    min-height: 50vh; /* Aplica min-height aqui */
+    display: flex;
+    flex-direction: column; /* Permite flexibilidade */
+    justify-content: center; /* Centraliza verticalmente */
+}
+
+h2 {
+    color: #4CAF50; /* Mesma cor do título da home */
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50; /* Botão com a cor verde */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049; /* Cor ao passar o mouse */
+}
+
+p {
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+p a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer p {
+    margin: 10px 0;
+}
